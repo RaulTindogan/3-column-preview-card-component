@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 0;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+main {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card {
+    padding: 50px 40px;
+}
+
+.icon-container, .heading {
+    margin-bottom: 30px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.sedan-card {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--Bright-orange);
+}
+
+.suv-card {
+    background-color: var(--Dark-cyan);
+}
+
+.luxury-card {
+    background-color: var(--Very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+.heading {
+    color: var(--Very-light-gray);
+    font-size:  2.125rem;
+    font-family: "Big Shoulders Display", sans-serif;
+}
+
+.info {
+    color: var(--Transparent-white);
+    line-height: 2rem;
+}
+
+.learn-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: var(--Very-light-gray);
+}
+
+.sedan-card .learn-btn {
+    color: var(--Bright-orange);
+}
+
+.suv-card .learn-btn {
+    color: var(--Dark-cyan);
+}
+
+.luxury-card .learn-btn {
+    color: var(--Very-dark-cyan);
+}
+
+.learn-btn:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+
+    main {
+        width: 720px;
+        display: flex;
+        height: auto;
+    }
+
+    .card {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sedan-card {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .luxury-card {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    main {
+        width: 900px;
+    }
+
+    .card {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .info {
+        margin-bottom: 5rem;
+    }
+}
+
